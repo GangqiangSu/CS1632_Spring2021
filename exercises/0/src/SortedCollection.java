@@ -49,10 +49,11 @@ public class SortedCollection {
 			return;
 		}
 		try {for (int i = 0; i < args.length; i++)
-		 {
-       		 collection.add(Integer.valueOf(args[i]));
-       			}
-       		}
+		 { collection.add(Integer.valueOf(args[i]));
+       			}}
+       		
+       	catch (NumberFormatException e) {
+     		 showUsage();}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
 		// If any commandline argument is not a number, call showUsage() and return.
