@@ -53,6 +53,7 @@ public class SortedCollection {
        			}}
        		
        	catch (NumberFormatException e) {
+       		System.out.println("Please Enter The Number: ");
      		 showUsage();}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
