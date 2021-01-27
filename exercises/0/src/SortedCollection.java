@@ -25,8 +25,8 @@ public class SortedCollection {
 	 */
 	public int remove() throws NoSuchElementException {
 		// TODO: Implement
-		int firstNumber = i.poll();
-		return firstNumber;
+		int firstElement = i.poll();
+		return firstElement;
 	}
 
 	/**
@@ -52,9 +52,9 @@ public class SortedCollection {
 		 { collection.add(Integer.valueOf(args[i]));
        			}}
        		
-       	catch (NumberFormatException e) {
-       		System.out.println("Please Enter The Number: ");
-     		 showUsage();}
+       	catch (NoSuchElementException e) {
+     		 showUsage();
+     		}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
 		// If any commandline argument is not a number, call showUsage() and return.
