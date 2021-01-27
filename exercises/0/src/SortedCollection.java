@@ -52,8 +52,9 @@ public class SortedCollection {
 		 { collection.add(Integer.valueOf(args[i]));
        			}}
        		
-       	catch (NoSuchElementException e) {
+       	catch (NumberFormatException e) {
      		 showUsage();
+     		 return;
      		}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
