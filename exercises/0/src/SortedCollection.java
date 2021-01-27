@@ -1,9 +1,10 @@
 //TODO: Import libraries as needed
 import java.util.NoSuchElementException;
+import java.util.PriorityQueue;
 
 public class SortedCollection {
 	// TODO: Add member variables or methods as needed
-
+	private PriorityQueue<Integer> i = new PriorityQueue<Integer>();
 	/**
 	 * Adds the number n to the collection.
 	 * 
@@ -12,6 +13,7 @@ public class SortedCollection {
 	 */
 	public boolean add(int n) {
 		// TODO: Implement
+		i.add(n);
 		return true;
 	}
 
@@ -23,7 +25,8 @@ public class SortedCollection {
 	 */
 	public int remove() throws NoSuchElementException {
 		// TODO: Implement
-		return 0;
+		int firstNumber = i.poll();
+		return firstNumber;
 	}
 
 	/**
@@ -45,6 +48,11 @@ public class SortedCollection {
 			showUsage();
 			return;
 		}
+		try {for (int i = 0; i < args.length; i++)
+		 {
+       		 collection.add(Integer.valueOf(args[i]));
+       			}
+       		}
 		
 		// TODO: add numbers in commandline arguments to collection using the add(int) method.
 		// If any commandline argument is not a number, call showUsage() and return.
